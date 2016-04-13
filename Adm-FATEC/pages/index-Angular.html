@@ -200,24 +200,24 @@
          </nav>
          <div id="page-wrapper" ng-switch="selected_item">
              <div ng-switch-when="gerenciar_cidades">
-             <h1>{{selected_item}}</h1>
+             <!--<h1>{{selected_item}}</h1> -->
            </div>
            <div ng-switch-when="gerenciar_bairros">
-             <h1>{{selected_item}}</h1>
+             <!--<h1>{{selected_item}}</h1>-->
            </div>
            <div ng-switch-when="novo_imovel">
-             <h1>{{novo_imovel}}</h1>
+             <!--<h1>{{novo_imovel}}</h1>-->
                <div ng-switch-when="novo_imovel">
              <div ng-controller="naviterno_cadastroimovel">
             	<ul class="nav nav-tabs" >
   				<li ng-class="{active: tab_map.dados}" role="presentation" class="active"><a href="#">Dados</a></li>
-  				<li ng-class="{active: tab_map.valores}"    role="presentation"><a href="#">Valores</a></li>
-  				<li ng-class="{active: tab_map.3}"role="presentation"><a href="#">2</a></li>
+  			<!--	<li ng-class="{active: tab_map.valores}"    role="presentation"><a href="#">Valores</a></li>
+  				<li ng-class="{active: tab_map.3}"role="presentation"><a href="#">2</a></li> -->
 			    </ul>
 
            
       					
-				
+				<!--
       				<div ng-class="{active: tab_map.valores}" class="ui bottom attached tab segment">
         						<p>Conteúdo da aba 2</p>
       				</div>
@@ -226,7 +226,7 @@
         						<p>Conteúdo da aba 3</p>
       				</div>
   		       </div>
-          
+                      -->
 
 
 
@@ -237,9 +237,12 @@
        
 
                								<!--CPO Finalidade-->
-
-        						<select class="form-control" ng-model="dados.finalidade">
-    								<option value=""></option>
+											
+    
+        						<label for="dados.finalidade">Finalidade</label>
+								<select class="form-control" ng-model="dados.finalidade">
+    								
+									    <option value=""></option>
     									<option value="venda">Venda</option>
     									<option value="locacao">Locação</option>
     									<option value="Temporada">Temporada</option>
@@ -248,7 +251,7 @@
 								
 											<!--CPO Tipo de Imóvel-->
 
-								<select class="form-control" ng-model="dados.tipo_imovel">
+								<!--<select class="form-control" ng-model="dados.tipo_imovel">
     								<option value=""></option>
     									<option value="apartamento">Apartamento</option>
     									<option value="area">Área</option>
@@ -306,7 +309,7 @@
     									<option value="x">X</option>
     									<option value="y">Y</option>
     									<option value="z">Z</option>    									
-								</select>
+								</select>  -->
 
 
 								<label for="dados.endereco">Endereço</label>
@@ -314,7 +317,7 @@
     						
 
 
-    							<label for="dados.dormitorios">Dormitórios</label>
+    							<!-- <label for="dados.dormitorios">Dormitórios</label>
     							<select  class="form-control" ng-model="dados.dormitorios">
     								<option value=""></option>
     									<option value="1">1</option>
@@ -353,7 +356,7 @@
     									<option value="2">2</option>
     									<option value="3">3</option>
     									<option value="4">4+</option>									
-								</select>
+								</select> -->
 						
   		</div>
 
@@ -362,13 +365,13 @@
              
            </div>
            <div ng-switch-when="imoveis_cadastrados">
-             <h1>{{selected_item}}</h1>
+            <!-- <h1>{{selected_item}}</h1> -->
            </div>
            <div ng-switch-when="pesquisar_imoveis">
-             <h1>{{selected_item}}</h1>
+            <!-- <h1>{{selected_item}}</h1> -->
            </div>
            <div ng-switch-when="alterar_posicao_destaque">
-             <h1>{{selected_item}}</h1>
+            <!-- <h1>{{selected_item}}</h1> -->
            </div>
          </div>
       </div>
