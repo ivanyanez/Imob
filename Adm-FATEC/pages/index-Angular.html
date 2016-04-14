@@ -185,6 +185,7 @@
                <h1>{{selected_item}}</h1>
            </div>
            <div ng-switch-when="imovel">
+            <input class="form-control" placeholder="Buscar ..." ng-model="imovel.search"></input>
                <form name="form_cadastro_imovel">
                   <label>Finalidade</label>
                   <select  class="form-control" ng-model="imovel.finalidade">
@@ -207,7 +208,7 @@
                      </tr>
                   </thead>
                   <tbody>
-                     <tr ng-repeat="imovel in imoveis">
+                     <tr ng-repeat="imovel in imoveis | filter: imovel.search">
                         <td>
                            {{imovel.finalidade}}
                         </td>
@@ -215,7 +216,7 @@
                            {{imovel.endereco}}
                         </td>
                         <td>
-                           <a ng-click="edit(imovel, $index)">
+                           <a ng-click="edit(imovel)">
                               <i class="glyphicon glyphicon-edit"></i>
                            </a>
                         </td>
